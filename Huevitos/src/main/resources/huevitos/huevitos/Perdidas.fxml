@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="615.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="huevitos.huevitos.Controller.PerdidasController">
+    <left>
+        <fx:include minWidth="-Infinity" source="Menu.fxml" />
+    </left>
+
+    <center>
+        <AnchorPane prefHeight="615.0" prefWidth="440.0">
+          <DatePicker fx:id="dpFecha" layoutX="85.0" layoutY="57.0" prefHeight="25.0" prefWidth="150.0" />
+          <Label layoutX="12.0" layoutY="11.0" text="Perdidas en mi negocio">
+             <font>
+                <Font name="System Bold Italic" size="14.0" />
+             </font>
+          </Label>
+          <TextField fx:id="txtCantidad" layoutX="85.0" layoutY="213.0" prefHeight="25.0" prefWidth="150.0" />
+          <TextField fx:id="txtArticulo" layoutX="85.0" layoutY="161.0" prefHeight="25.0" prefWidth="150.0" />
+          <TextField fx:id="txtDescripcion" layoutX="85.0" layoutY="265.0" prefHeight="25.0" prefWidth="150.0" promptText="Opcional" />
+          <Button fx:id="btnAgregar" layoutX="120.0" layoutY="318.0" mnemonicParsing="false" onAction="#onAgregar" prefHeight="25.0" prefWidth="91.0" text="Agregar" />
+          <Label layoutX="13.0" layoutY="58.0" text="Fecha" />
+          <Label layoutX="14.0" layoutY="110.0" text="Tipo" />
+          <Label layoutX="13.0" layoutY="163.0" text="Artículo" />
+          <Label layoutX="13.0" layoutY="214.0" text="Cantidad" />
+          <Label layoutX="13.0" layoutY="265.0" text="Descripción" />
+          <MenuButton fx:id="mbTipo" layoutX="85.0" layoutY="109.0" mnemonicParsing="false" onAction="#onTipo" prefHeight="25.0" prefWidth="150.0">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Action 1" />
+              <MenuItem mnemonicParsing="false" text="Action 2" />
+            </items>
+          </MenuButton>
+        </AnchorPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="huevitos.huevitos.Controller.InventarioController">
+    <left>
+        <fx:include minWidth="-Infinity" source="Menu.fxml" />
+    </left>
+
+    <center>
+        <AnchorPane prefHeight="631.0" prefWidth="557.0">
+         <children>
+            <VBox layoutX="7.0" layoutY="7.0" prefHeight="586.0" prefWidth="305.0">
+               <children>
+                  <TitledPane fx:id="tpLotes" animated="false" onDragDetected="#onLotes" prefHeight="97.0" prefWidth="305.0" text="Lotes">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="111.0" prefWidth="303.0">
+                           <children>
+                              <TableView fx:id="tvLotes" prefHeight="71.0" prefWidth="303.0">
+                                <columns>
+                                  <TableColumn fx:id="tcIdLotes" prefWidth="41.0" text="Id" />
+                                  <TableColumn fx:id="tcFechaLotes" prefWidth="59.0" text="Fecha" />
+                                    <TableColumn fx:id="tcSemanasLote" prefWidth="54.0" text="Semanas" />
+                                    <TableColumn fx:id="tcRazaLotes" prefWidth="92.0" text="Raza" />
+                                    <TableColumn fx:id="tcCantidadLotes" prefWidth="56.0" text="Cantidad" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane fx:id="tpHuevos" animated="false" prefHeight="97.0" prefWidth="305.0" text="Huevos">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tvHuevos" prefHeight="71.0" prefWidth="303.0">
+                                 <columns>
+                                    <TableColumn fx:id="tcTipoHuevos" prefWidth="142.0" text="Tipo" />
+                                    <TableColumn fx:id="tcCantidadHuevos" prefWidth="160.0" text="Cantidad" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane fx:id="tpActivos" animated="false" prefHeight="98.0" prefWidth="305.0" text="Activos">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView layoutY="-2.0" prefHeight="74.0" prefWidth="303.0">
+                                 <columns>
+                                    <TableColumn fx:id="tcArticuloActivos" prefWidth="146.0" text="Artículo" />
+                                    <TableColumn fx:id="tcCAntidadActivos" prefWidth="156.0" text="Cantidad" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane fx:id="tpInsumos" animated="false" prefHeight="98.0" prefWidth="305.0" text="Insumos de producción">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView layoutY="-1.0" prefHeight="74.0" prefWidth="303.0">
+                                 <columns>
+                                    <TableColumn fx:id="tcArticuloInsumos" prefWidth="120.0" text="Artículo" />
+                                    <TableColumn fx:id="tcCantidadInsumos" prefWidth="97.0" text="Cantidad" />
+                                    <TableColumn fx:id="tcConsumoInsumos" prefWidth="85.0" text="Consumo" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane fx:id="tpRepuestos" animated="false" prefHeight="97.0" prefWidth="305.0" text="Repuestos">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tvRepuestos" layoutY="-1.0" prefHeight="74.0" prefWidth="303.0">
+                                 <columns>
+                                    <TableColumn fx:id="tcArticuloRepuestos" prefWidth="123.0" text="Artículo" />
+                                    <TableColumn fx:id="tcCantidadRepuestos" prefWidth="98.0" text="Cantidad" />
+                                    <TableColumn fx:id="tcUsadasRepuestos" text="Usadas" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane fx:id="tpOtros" animated="false" prefHeight="96.0" prefWidth="305.0" text="Otros">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tvOtros" layoutY="-2.0" prefHeight="72.0" prefWidth="303.0">
+                                 <columns>
+                                    <TableColumn fx:id="tcArticuloOtros" prefWidth="124.0" text="Artículo" />
+                                    <TableColumn fx:id="tcCantidadOtros" prefWidth="100.0" text="Cantidad" />
+                                    <TableColumn fx:id="tcUsadasOtros" prefWidth="78.0" text="Usadas" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+    </center>
+</BorderPane>
