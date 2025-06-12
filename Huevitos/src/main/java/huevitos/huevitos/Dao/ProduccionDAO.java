@@ -27,14 +27,14 @@ public class ProduccionDAO {
         }
     }
 
-    public static List<String> obtenerProduccion(String usuarioId) {
+    public static List<String> obtenerProduccion(String negocioId) {
         List<String> lista = new ArrayList<>();
         String sql = "SELECT * FROM produccion WHERE usuario_id = ?";
 
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            stmt.setString(1, usuarioId);
+            stmt.setString(1, negocioId);
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
