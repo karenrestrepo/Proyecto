@@ -2,9 +2,10 @@ package huevitos.huevitos.Controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
-
 import java.io.IOException;
+import java.net.URL;
 
 public class MenuController {
 
@@ -52,19 +53,33 @@ public class MenuController {
         loadView("Inventario.fxml");  // Cargar la vista de Inventario
     }
 
+    @FXML
+    private void initialize() {
+        loadView("Home.fxml");
+    }
+
+
     // Método común para cargar cualquier vista
     private void loadView(String fxmlFile) {
         try {
-            // Aquí cargarías el FXML correspondiente a la vista seleccionada
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
-            AnchorPane view = loader.load();  // Cargar la vista FXML
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Vistas/" + fxmlFile));
+            Parent view = loader.load();
 
-            // Establecer la vista cargada en el contenedor central
-            contentPane.getChildren().setAll(view);
+            // Asegura que el contenido anterior se borre
+            contentPane.getChildren().clear();
+            contentPane.getChildren().add(view);
+
+            // Haz que el nuevo contenido se ajuste al tamaño del AnchorPane
+            AnchorPane.setTopAnchor(view, 0.0);
+            AnchorPane.setRightAnchor(view, 0.0);
+            AnchorPane.setBottomAnchor(view, 0.0);
+            AnchorPane.setLeftAnchor(view, 0.0);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
 }
 

@@ -19,8 +19,8 @@ public class HuevitoApplication extends Application {
             System.err.println("Error al inicializar base de datos: " + e.getMessage());
             e.printStackTrace();
         }
-        FXMLLoader fxmlLoader = new FXMLLoader(HuevitoApplication.class.getResource("Login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        FXMLLoader fxmlLoader = new FXMLLoader(HuevitoApplication.class.getResource("/Vistas/Login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 494, 356);
         stage.setTitle("Sistema Huevitos");
         stage.setScene(scene);
         stage.show();

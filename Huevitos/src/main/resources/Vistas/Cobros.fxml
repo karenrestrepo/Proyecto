@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="huevitos.huevitos.Controller.CobrosController">
+
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="580.0" prefWidth="300.0" spacing="10.0">
+
+            <!-- Tabla de Clientes -->
+            <TableView fx:id="tvClientes" prefHeight="250.0" prefWidth="317.0">
+                <columns>
+                    <TableColumn fx:id="tcNombreCliente" prefWidth="193.0" text="Cliente" />
+                    <TableColumn fx:id="tcDeudaCliente" prefWidth="106.0" text="Deuda" />
+                </columns>
+            </TableView>
+
+            <!-- Contenedor de Detalle de Compras -->
+            <VBox fx:id="detalleContainer" managed="false" spacing="5.0" style="-fx-border-color: #ccc; -fx-padding: 10;" visible="false">
+
+                <Label fx:id="clienteNombreLabel" style="-fx-font-weight: bold;" text="Compras de:" />
+
+                <TableView fx:id="tvCompras" prefHeight="250.0" prefWidth="300.0">
+                    <columns>
+                        <TableColumn fx:id="tcDíasDeuda" prefWidth="60.0" text="Días de deuda" />
+                        <TableColumn fx:id="tcCubeta" prefWidth="60.0" text="Cubeta" />
+                        <TableColumn fx:id="tcCantidadCubetas" prefWidth="60.0" text="Cantidad" />
+                        <TableColumn fx:id="tcValorcubeta" prefWidth="60.0" text="Valor" />
+                        <TableColumn fx:id="tcAcciónDeuda" prefWidth="60.0" text="Acción" />
+                    </columns>
+                </TableView>
+
+                <Button fx:id="btnCerrarDetalle" alignment="CENTER_RIGHT" text="Cerrar Detalle" />
+            </VBox>
+
+        </VBox>
+    </children>
+</AnchorPane>
