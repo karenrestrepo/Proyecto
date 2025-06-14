@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TitledPane;
-import javafx.scene.input.MouseEvent;
 
 public class InventarioController {
 
@@ -89,7 +88,13 @@ public class InventarioController {
     private TitledPane tpRepuestos;
 
     @FXML
+    private TableView<?> tvActivos;
+
+    @FXML
     private TableView<?> tvHuevos;
+
+    @FXML
+    private TableView<?> tvInsumos;
 
     @FXML
     private TableView<?> tvLotes;
@@ -101,13 +106,9 @@ public class InventarioController {
     private TableView<?> tvRepuestos;
 
     @FXML
-    void onLotes(MouseEvent event) {
-
-    }
-
-    @FXML
     void initialize() {
 
     }
 
 }
+

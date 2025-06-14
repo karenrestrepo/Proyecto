@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="600.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="huevitos.huevitos.Controller.InventarioController">
 
     <children>
         <AnchorPane prefHeight="590.0" prefWidth="314.0">
          <children>
-            <VBox layoutX="5.0" layoutY="4.0" prefHeight="586.0" prefWidth="305.0">
-               <children>
-                  <TitledPane fx:id="tpLotes" animated="false" onDragDetected="#onLotes" prefHeight="97.0" prefWidth="305.0" text="Lotes">
+            <Accordion layoutX="5.0" layoutY="5.0" prefHeight="590.0" prefWidth="305.0">
+               <panes>
+                  <TitledPane fx:id="tpLotes" expanded="false" text="Lotes">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="111.0" prefWidth="303.0">
                            <children>
-                              <TableView fx:id="tvLotes" prefHeight="71.0" prefWidth="303.0">
+                              <TableView fx:id="tvLotes" prefHeight="441.0" prefWidth="303.0">
                                 <columns>
                                   <TableColumn fx:id="tcIdLotes" prefWidth="41.0" text="Id" />
                                   <TableColumn fx:id="tcFechaLotes" prefWidth="59.0" text="Fecha" />
@@ -30,11 +30,11 @@
                         </AnchorPane>
                     </content>
                   </TitledPane>
-                  <TitledPane fx:id="tpHuevos" animated="false" prefHeight="97.0" prefWidth="305.0" text="Huevos">
+                  <TitledPane fx:id="tpHuevos" expanded="false" text="Huevos">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TableView fx:id="tvHuevos" prefHeight="71.0" prefWidth="303.0">
+                              <TableView fx:id="tvHuevos" prefHeight="439.0" prefWidth="303.0">
                                  <columns>
                                     <TableColumn fx:id="tcTipoHuevos" prefWidth="142.0" text="Tipo" />
                                     <TableColumn fx:id="tcCantidadHuevos" prefWidth="160.0" text="Cantidad" />
@@ -44,11 +44,11 @@
                         </AnchorPane>
                     </content>
                   </TitledPane>
-                  <TitledPane fx:id="tpActivos" animated="false" prefHeight="98.0" prefWidth="305.0" text="Activos">
+                  <TitledPane fx:id="tpActivos" expanded="false" text="Activos">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TableView layoutY="-2.0" prefHeight="74.0" prefWidth="303.0">
+                              <TableView fx:id="tvActivos" layoutY="-2.0" prefHeight="440.0" prefWidth="303.0">
                                  <columns>
                                     <TableColumn fx:id="tcArticuloActivos" prefWidth="146.0" text="Artículo" />
                                     <TableColumn fx:id="tcCAntidadActivos" prefWidth="156.0" text="Cantidad" />
@@ -58,11 +58,11 @@
                         </AnchorPane>
                     </content>
                   </TitledPane>
-                  <TitledPane fx:id="tpInsumos" animated="false" prefHeight="98.0" prefWidth="305.0" text="Insumos de producción">
+                  <TitledPane fx:id="tpInsumos" expanded="false" text="Insumos de producción">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TableView layoutY="-1.0" prefHeight="74.0" prefWidth="303.0">
+                              <TableView fx:id="tvInsumos" layoutY="-1.0" prefHeight="439.0" prefWidth="303.0">
                                  <columns>
                                     <TableColumn fx:id="tcArticuloInsumos" prefWidth="120.0" text="Artículo" />
                                     <TableColumn fx:id="tcCantidadInsumos" prefWidth="97.0" text="Cantidad" />
@@ -73,11 +73,11 @@
                         </AnchorPane>
                     </content>
                   </TitledPane>
-                  <TitledPane fx:id="tpRepuestos" animated="false" prefHeight="97.0" prefWidth="305.0" text="Repuestos">
+                  <TitledPane fx:id="tpRepuestos" expanded="false" text="Repuestos">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TableView fx:id="tvRepuestos" layoutY="-1.0" prefHeight="74.0" prefWidth="303.0">
+                              <TableView fx:id="tvRepuestos" layoutY="-1.0" prefHeight="441.0" prefWidth="303.0">
                                  <columns>
                                     <TableColumn fx:id="tcArticuloRepuestos" prefWidth="123.0" text="Artículo" />
                                     <TableColumn fx:id="tcCantidadRepuestos" prefWidth="98.0" text="Cantidad" />
@@ -88,11 +88,11 @@
                         </AnchorPane>
                     </content>
                   </TitledPane>
-                  <TitledPane fx:id="tpOtros" animated="false" prefHeight="96.0" prefWidth="305.0" text="Otros">
+                  <TitledPane fx:id="tpOtros" expanded="false" text="Otros">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TableView fx:id="tvOtros" layoutY="-2.0" prefHeight="72.0" prefWidth="303.0">
+                              <TableView fx:id="tvOtros" layoutY="-2.0" prefHeight="440.0" prefWidth="303.0">
                                  <columns>
                                     <TableColumn fx:id="tcArticuloOtros" prefWidth="124.0" text="Artículo" />
                                     <TableColumn fx:id="tcCantidadOtros" prefWidth="100.0" text="Cantidad" />
@@ -103,8 +103,8 @@
                         </AnchorPane>
                     </content>
                   </TitledPane>
-               </children>
-            </VBox>
+               </panes>
+            </Accordion>
          </children></AnchorPane>
     </children>
 </AnchorPane>
